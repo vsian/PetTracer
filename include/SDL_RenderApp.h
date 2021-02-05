@@ -9,13 +9,13 @@ class SDL_RenderApp {
         SDL_Renderer *renderer;
         bool quit = false;
         SDL_Event event;
+        virtual bool onEvent(SDL_Event* evnt) {}
+        virtual void onResize() {}
+        virtual void onRender() {}
     public:
         SDL_RenderApp() {}
-        bool Initialize();
+        virtual bool Initialize();
         void Run();
-        virtual bool onResize();
-        virtual bool onEvent(SDL_Event* evnt);
-        virtual bool onRender();
         ~SDL_RenderApp() {
             SDL_DestroyWindow(window);
             SDL_DestroyRenderer(renderer);

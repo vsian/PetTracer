@@ -1,7 +1,7 @@
 mkfile_path = $(abspath $(lastword $(MAKEFILE_LIST)))
 mkfile_dir = $(dir $(mkfile_path))
 # 源文件
-SRC = main.cpp
+SRC = main.cpp SDL_RenderApp.cpp Tracer.cpp
 # 库的位置
 INCLUDEDIR = $(mkfile_dir)/../include/
 SDLDIR = $(INCLUDEDIR)/SDLlib
