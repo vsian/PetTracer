@@ -6,9 +6,9 @@
 class TracerApp : public SDL_RenderApp{
     public:
         TracerApp() {
-            lower_f = Eigen :: Vector3f(-2.0, -1.5, -1.0);
+            lower_f = Eigen :: Vector3f(-2.0, -1.0, -1.0);
             horizontal = Eigen :: Vector3f(4.0, 0.0, 0.0);
-            vertical = Eigen :: Vector3f(0.0, 3.0, 0.0);
+            vertical = Eigen :: Vector3f(0.0, 2.0, 0.0);
             origin = Eigen :: Vector3f(0.0, 0.0, 0.0);
             SDL_RenderApp :: Initialize();
         }

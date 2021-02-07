@@ -32,9 +32,10 @@ void TracerApp :: onRender() {
             if(SDL_SetRenderDrawColor(renderer, (int)(col[0] * 255.0), (int)(col[1] * 255.0), (int)(col[2] * 255.0), 255) < 0) {
                 std :: cout << "Set draw color error!\n";
             }
-        }
-        if(SDL_RenderDrawPoint(renderer, i, j) < 0) {
-            std :: cout << "Draw point error!\n";
+            if(SDL_RenderDrawPoint(renderer, i, j) < 0) {
+                std :: cout << "Draw point error!\n";
+            }
+            //std :: cout << (int)(col[0] * 255.0) << " " << (int)(col[1] * 255.0) << " " << (int)(col[2] * 255.0) << "\n";
         }
     }
     SDL_RenderPresent(renderer);

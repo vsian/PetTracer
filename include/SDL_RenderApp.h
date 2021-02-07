@@ -4,8 +4,7 @@
 #include "SDL2/SDL.h"
 class SDL_RenderApp {
     protected:
-        bool rendered = false;
-        unsigned int width = 800, height = 600;
+        unsigned int width = 800, height = 400;
         SDL_Window *window;
         SDL_Renderer *renderer;
         bool quit = false;
