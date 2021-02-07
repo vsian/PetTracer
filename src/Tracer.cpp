@@ -28,9 +28,14 @@ void TracerApp :: onRender() {
             float v = (float)j / (float)height;
             Ray :: Ray r(origin, lower_f + u * horizontal + v * vertical);
             Eigen :: Vector3f col = color(r);
-            SDL_SetRenderDrawColor(SDL_RenderApp :: renderer, int(col[0] * 255.99), int(col[1] * 255.99), int(col[2] * 255.99), 255);
+            //std :: cout << col << "\n";
+            if(SDL_SetRenderDrawColor(renderer, (int)(col[0] * 255.0), (int)(col[1] * 255.0), (int)(col[2] * 255.0), 255) < 0) {
+                std :: cout << "Set draw color error!\n";
+            }
         }
-        SDL_RenderDrawPoint(SDL_RenderApp :: renderer, i, j);
+        if(SDL_RenderDrawPoint(renderer, i, j) < 0) {
+            std :: cout << "Draw point error!\n";
+        }
     }
     SDL_RenderPresent(renderer);
 }

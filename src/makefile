@@ -6,9 +6,9 @@ SRC = main.cpp SDL_RenderApp.cpp Tracer.cpp
 INCLUDEDIR = $(mkfile_dir)/../include/
 SDLDIR = $(INCLUDEDIR)/SDLlib
 # 编译参数
-CFLAGS = -I $(SDLDIR)/include -I $(INCLUDEDIR) -L $(SDLDIR)/lib -lmingw32 -lSDL2main -lSDL2 -O2 #-mwindows
+CFLAGS = -I $(SDLDIR)/include -I $(INCLUDEDIR) -L $(SDLDIR)/lib -lmingw32 -lSDL2main -lSDL2 -O2 #-mwindows 
 # 选择编译器
 CC = g++
 
 demo.exe: $(SRC)
-	$(CC) $(SRC) $(CFLAGS) -o ../demo.exe
+	$(CC) -g $(SRC) $(CFLAGS) -o ../demo.exe
