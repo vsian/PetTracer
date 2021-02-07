@@ -12,6 +12,8 @@ bool SDL_RenderApp :: Initialize() {
         quit = true;
         return false;
     }
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+    return true;
 }
 void SDL_RenderApp :: Run() {
     while(!quit) {
@@ -23,7 +25,6 @@ void SDL_RenderApp :: Run() {
         }
         if(quit) {
             onRender();
-            SDL_RenderPresent(renderer);
         }
     }
     SDL_Quit();

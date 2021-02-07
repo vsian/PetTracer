@@ -9,9 +9,9 @@ class SDL_RenderApp {
         SDL_Renderer *renderer;
         bool quit = false;
         SDL_Event event;
-        virtual bool onEvent(SDL_Event* evnt) {}
-        virtual void onResize() {}
-        virtual void onRender() {}
+        virtual bool onEvent(SDL_Event* evnt) = 0;
+        virtual void onResize() = 0;
+        virtual void onRender() = 0;
     public:
         SDL_RenderApp() {}
         virtual bool Initialize();

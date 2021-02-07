@@ -11,9 +11,8 @@ bool TracerApp :: onEvent(SDL_Event* evnt) {
     {
     case SDL_QUIT:
         return false;
-        break;
     default:
-        break;
+        return true;
     }
 }
 
@@ -33,4 +32,5 @@ void TracerApp :: onRender() {
         }
         SDL_RenderDrawPoint(SDL_RenderApp :: renderer, i, j);
     }
+    SDL_RenderPresent(renderer);
 }
