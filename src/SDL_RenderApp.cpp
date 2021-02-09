@@ -23,8 +23,9 @@ void SDL_RenderApp :: Run() {
                 break;
             }
         }
-        if(!quit) {
+        if(!quit && !rendered) {
             onRender();
+            rendered = true;
         }
     }
     SDL_Quit();

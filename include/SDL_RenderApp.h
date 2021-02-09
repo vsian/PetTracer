@@ -4,10 +4,11 @@
 #include "SDL2/SDL.h"
 class SDL_RenderApp {
     protected:
-        unsigned int width = 800, height = 400;
+        unsigned int width = 800, height = 600;
         SDL_Window *window;
         SDL_Renderer *renderer;
         bool quit = false;
+        bool rendered = false;
         SDL_Event event;
         virtual bool onEvent(SDL_Event* evnt) = 0;
         virtual void onResize() = 0;
