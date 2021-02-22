@@ -13,6 +13,7 @@ bool sphere :: hit(const Ray :: Ray& r, float tmin, float tmax, hit_record& rec)
             rec.t = sol;
             rec.p = r.point_at_parameter(sol);
             rec.normal = (rec.p - center) / radius;
+            rec.mat_ptr = mat_ptr;
             return true;
         }
         sol = sol_part_2 + sol_part_1;
@@ -20,6 +21,7 @@ bool sphere :: hit(const Ray :: Ray& r, float tmin, float tmax, hit_record& rec)
             rec.t = sol;
             rec.p = r.point_at_parameter(sol);
             rec.normal = (rec.p - center) / radius;
+            rec.mat_ptr = mat_ptr;
             return true;
         }
     }
